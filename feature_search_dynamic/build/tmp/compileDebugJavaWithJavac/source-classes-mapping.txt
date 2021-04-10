@@ -1,0 +1,8 @@
+com/alimoradi/feature_search_dynamic/BuildConfig.java
+ com.alimoradi.feature_search_dynamic.BuildConfig
+com/alimoradi/feature_search_dynamic/R.java
+ com.alimoradi.feature_search_dynamic.R
+ com.alimoradi.feature_search_dynamic.R$drawable
+ com.alimoradi.feature_search_dynamic.R$id
+ com.alimoradi.feature_search_dynamic.R$layout
+ com.alimoradi.feature_search_dynamic.R$string

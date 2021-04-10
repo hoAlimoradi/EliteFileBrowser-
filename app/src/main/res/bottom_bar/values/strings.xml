@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bottom_bar_ok" translatable="false">@string/ok</string>
+    <string name="bottom_bar_files" translatable="false">@string/files</string>
+    <string name="bottom_bar_notes" translatable="false">@string/notes</string>
+    <string name="bottom_bar_settings" translatable="false">@string/settings</string>
+
+    <string name="file_model_local_new_title" translatable="false">Action</string>
+    <string name="file_model_local_new_folder_file" translatable="false">New Folder or File</string>
+    <string name="file_model_local_new_folder_file_description" translatable="false">Choose a file name with ext or a folder name.</string>
+</resources>

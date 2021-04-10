@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EliteFileBrowser</string>
+
+    <string name="oops_something_went_wrong">Oops, something went wrong :(</string>
+
+    <!-- region WORDS -->
+    <string name="cancel">Cancel</string>
+    <string name="copy">نسخ</string>
+    <string name="cut">قص</string>
+    <string name="delete">مسح</string>
+    <string name="download">تنزيل</string>
+    <string name="more">More</string>
+    <string name="ok">OK</string>
+    <string name="open">فتح</string>
+    <string name="openas">فتح كـ</string>
+    <string name="paste">لصق</string>
+    <string name="pause">إيقاف</string>
+    <string name="play">تشغيل</string>
+    <string name="rename">إعادة تسمية</string>
+    <string name="share">مشاركة</string>
+    <string name="stop">توقف</string>
+    <!-- endregion WORDS -->
+
+</resources>

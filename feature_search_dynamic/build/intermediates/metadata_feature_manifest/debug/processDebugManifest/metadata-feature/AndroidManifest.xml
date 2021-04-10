@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    featureSplit="feature_search_dynamic"
+    package="com.alimoradi.elitefilebrowser"
+    android:versionCode="1"
+    android:versionName="1.0.0.dev" >
+
+    <uses-sdk android:targetSdkVersion="29" />
+
+    <dist:module
+        dist:instant="false"
+        dist:onDemand="true"
+        dist:title="@string/title_feature_search_dynamic" >
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:testOnly="true" >
+        <activity
+            android:name="com.alimoradi.feature_search_dynamic.activity.SearchActivity"
+            android:label="@string/activity_dynamic_search_label"
+            android:splitName="feature_search_dynamic"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

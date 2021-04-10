@@ -1,0 +1,69 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+	package
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:3:1-47
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+	xmlns:dist
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:2:1-57
+	android:versionCode
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:1:11-69
+dist:module
+ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:5:1-12:15
+	dist:instant
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:6:5-25
+	dist:title
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:8:5-54
+	dist:onDemand
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:7:5-25
+dist:fusing
+ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:10:5-40
+	dist:include
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:10:18-37
+application
+ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:14:1-25:15
+	android:allowBackup
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:14:14-41
+activity#com.alimoradi.feature_search_dynamic.activity.SearchActivity
+ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:16:5-23:16
+	android:label
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:18:9-62
+	android:theme
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:19:9-40
+	android:name
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:17:9-48
+intent-filter#action:name:android.intent.action.VIEW
+ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:20:9-22:25
+action#android.intent.action.VIEW
+ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:21:13-65
+	android:name
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml:21:21-62
+uses-sdk
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+		ADDED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml
+		INJECTED from /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/AndroidManifest.xml

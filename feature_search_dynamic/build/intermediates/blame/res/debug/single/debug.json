@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/drawable-hdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/generated/res/pngs/debug/drawable-hdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/drawable-ldpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/generated/res/pngs/debug/drawable-ldpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/drawable-mdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/generated/res/pngs/debug/drawable-mdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/layout_activity_search.xml.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/res/layout/activity_search.xml"
+    },
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/drawable-xhdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/generated/res/pngs/debug/drawable-xhdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_arrow_back_black_24dp.xml.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_arrow_back_black_24dp.xml"
+    },
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/generated/res/pngs/debug/drawable-xxhdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/res/merged/debug/layout_view_search_list.xml.flat",
+        "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/res/layout/view_search_list.xml"
+    }
+]

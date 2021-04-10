@@ -1,0 +1,2 @@
+com/alimoradi/feature_purchase/BuildConfig.java
+ com.alimoradi.feature_purchase.BuildConfig

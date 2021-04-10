@@ -1,0 +1,13 @@
+include ':feature_search_dynamic'
+include ':server'
+include ':file_api_online_android'
+include ':file_api_online'
+include ':file_api_android'
+include ':file_api'
+include ':feature_purchase'
+include ':feature_event_mercan'
+include ':feature_base64'
+include ':feature_aes'
+include ':app_tv'
+include ':app'
+rootProject.name = "EliteFileBrowser"

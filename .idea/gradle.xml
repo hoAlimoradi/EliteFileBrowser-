@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app_tv" />
+            <option value="$PROJECT_DIR$/feature_aes" />
+            <option value="$PROJECT_DIR$/feature_base64" />
+            <option value="$PROJECT_DIR$/feature_event_mercan" />
+            <option value="$PROJECT_DIR$/feature_purchase" />
+            <option value="$PROJECT_DIR$/feature_search_dynamic" />
+            <option value="$PROJECT_DIR$/file_api" />
+            <option value="$PROJECT_DIR$/file_api_android" />
+            <option value="$PROJECT_DIR$/file_api_online" />
+            <option value="$PROJECT_DIR$/file_api_online_android" />
+            <option value="$PROJECT_DIR$/server" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

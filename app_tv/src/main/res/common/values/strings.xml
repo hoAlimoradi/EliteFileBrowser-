@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EliteFileBrowser</string>
+
+    <string name="browse_title"><![CDATA[EliteFileBrowser]]></string>
+    <string name="personal_settings">Paramètres perso</string>
+
+    <!-- Error messages -->
+    <string name="error_fragment_message">Une erreur s\'est produite</string>
+    <string name="dismiss_error">Fermer</string>
+
+</resources>

@@ -1,0 +1,8 @@
+# Referenced at /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/merged_manifests/debug/AndroidManifest.xml:24
+-keep class com.alimoradi.feature_search_dynamic.activity.SearchActivity { <init>(); }
+# Referenced at /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/res/layout/view_search_list.xml:7
+-keep class androidx.recyclerview.widget.RecyclerView { <init>(...); }
+
+# Referenced at /home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/res/layout/activity_search.xml:78
+-keep class com.alimoradi.feature_search_dynamic.list.SearchListView { <init>(...); }
+

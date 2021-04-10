@@ -1,0 +1,233 @@
+package com.alimoradi.elitefilebrowser.main
+
+import android.annotation.SuppressLint
+import android.content.Context
+import com.alimoradi.elitefilebrowser.audio.AudioModule
+import com.alimoradi.elitefilebrowser.dialog.DialogModule
+import com.alimoradi.elitefilebrowser.network.NetworkModule
+import com.alimoradi.elitefilebrowser.note.NoteModule
+import com.alimoradi.elitefilebrowser.notification.NotificationModule
+import com.alimoradi.elitefilebrowser.developer.DeveloperModule
+import com.alimoradi.elitefilebrowser.file_provider_root.FileProviderRootModule
+import com.alimoradi.elitefilebrowser.file_storage_stats.FileStorageStatsModule
+import com.alimoradi.elitefilebrowser.theme.ThemeModule
+import com.alimoradi.elitefilebrowser.version.VersionModule
+import com.alimoradi.elitefilebrowser.hash.HashModule
+import com.alimoradi.elitefilebrowser.main_thread.MainThreadModule
+import com.alimoradi.elitefilebrowser.network.NetworkManager
+import com.alimoradi.elitefilebrowser.product.ProductModule
+import com.alimoradi.elitefilebrowser.ram_stats.RamStatsModule
+import com.alimoradi.elitefilebrowser.remote_config.RemoteConfigModule
+import com.alimoradi.elitefilebrowser.screen.ScreenModule
+import com.alimoradi.elitefilebrowser.split_install.SplitInstallModule
+import com.alimoradi.elitefilebrowser.toast.ToastModule
+import com.alimoradi.elitefilebrowser.update.UpdateModule
+import com.alimoradi.file_api_android.FileModule
+import com.alimoradi.file_api_android.PermissionRequestAddOn
+import com.alimoradi.file_api_online_android.FileOnlineApiNetwork
+import com.alimoradi.file_api_online_android.FileOnlineGraph
+import org.json.JSONObject
+import java.io.File
+
+class ApplicationGraph(
+    private val context: Context
+) {
+
+    private val fileModule by lazy { FileModule(context, createPermissionRequestAddOn()) }
+    private val developerModule by lazy { DeveloperModule(context) }
+    private val networkModule by lazy { NetworkModule() }
+    private val noteModule by lazy { NoteModule(context) }
+    private val screenModule by lazy { ScreenModule(context) }
+
+    private val audioManager by lazy { audioModule.createAudioManager() }
+    private val audioQueueManager by lazy { audioModule.createAudioQueueManager(audioManager) }
+    private val audioModule by lazy { AudioModule(fileSortManager) }
+    private val developerManager by lazy { developerModule.createDeveloperManager() }
+    private val dialogManager by lazy { DialogModule(context).createDialogManager() }
+    private val fileManager by lazy { fileModule.createFileManager() }
+    private val fileChildrenManager by lazy { fileModule.createFileChildrenManager() }
+    private val fileCopyCutManager by lazy { fileModule.createFileCopyCutManager() }
+    private val fileCreatorManager by lazy { fileModule.createFileCreatorManager() }
+    private val fileDeleteManager by lazy { fileModule.createFileDeleteManager() }
+    private val fileMediaScanner by lazy { fileModule.getMediaScanner() }
+    private val fileOnlineManager by lazy { FileOnlineGraph.getFileOnlineManager() }
+    private val fileOnlineChildrenManager by lazy { FileOnlineGraph.getFileOnlineChildrenManager() }
+    private val fileOnlineCopyCutManager by lazy { FileOnlineGraph.getFileOnlineCopyCutManager() }
+    private val fileOnlineCreatorManager by lazy { FileOnlineGraph.getFileOnlineCreatorManager() }
+    private val fileOnlineDeleteManager by lazy { FileOnlineGraph.getFileOnlineDeleteManager() }
+    private val fileOnlineDownloadManager by lazy { FileOnlineGraph.getFileOnlineDownloadManager() }
+    private val fileOnlineLoginManager by lazy { FileOnlineGraph.getFileOnlineLoginManager() }
+    private val fileOnlineRenameManager by lazy { FileOnlineGraph.getFileOnlineRenameManager() }
+    private val fileOnlineShareManager by lazy { FileOnlineGraph.getFileOnlineShareManager() }
+    private val fileOnlineSizeManager by lazy { FileOnlineGraph.getFileOnlineSizeManager() }
+    private val fileOnlineUploadManager by lazy { FileOnlineGraph.getFileOnlineUploadManager() }
+    private val fileOpenManager by lazy { fileModule.createFileOpenManager() }
+    private val filePathManager by lazy { fileModule.getFilePathManager() }
+    private val fileProviderRootManager by lazy { FileProviderRootModule().createFileProviderRootManager() }
+    private val fileRootManager by lazy { fileModule.getFileRootManager() }
+    private val fileScopedStorageManager by lazy { fileModule.getFileScopedStorageManager() }
+    private val fileShareManager by lazy { fileModule.createFileShareManager() }
+    private val fileStorageStatsManager by lazy { FileStorageStatsModule().createFileStorageStatsManager() }
+    private val fileRenameManager by lazy { fileModule.createFileRenameManager() }
+    private val fileSizeManager by lazy { fileModule.getFileSizeManager() }
+    private val fileSortManager by lazy { fileModule.createFileSortManager() }
+    private val hashManager by lazy { HashModule(context).createHashManager() }
+    private val mainThreadPost by lazy { MainThreadModule().createMainThreadPost() }
+    private val networkManager by lazy { networkModule.createNetworkManager() }
+    private val noteManager by lazy { noteModule.createNoteManager() }
+    private val notificationModule by lazy { NotificationModule(context, audioManager) }
+    private val notificationAudioManager by lazy { notificationModule.createNotificationAudioManager() }
+    private val okHttpClientLazy by lazy { networkModule.createOkHttpClientLazy() }
+    private val permissionManager by lazy { fileModule.getPermissionManager() }
+    private val productManager by lazy { ProductModule(context).createProductManager() }
+    private val ramStatsManager by lazy { RamStatsModule(context).createRamStatsManager() }
+    private val remoteConfig by lazy { RemoteConfigModule().createRemoteConfig() }
+    private val screenManager by lazy { screenModule.createScreenManager() }
+    private val splitInstallManager by lazy { SplitInstallModule(context).createSplitInstallManager() }
+    private val themeManager by lazy { ThemeModule(context).createThemeManager() }
+    private val toastManager by lazy { ToastModule(context).createToastManager() }
+    private val updateManager by lazy { UpdateModule(context).createUpdateManager() }
+    private val versionManager by lazy { VersionModule(context).createVersionManager() }
+
+    private fun createPermissionRequestAddOn() = object : PermissionRequestAddOn {
+        override fun requestStoragePermission() {
+            screenManager.startPermission()
+        }
+    }
+
+    companion object {
+
+        @SuppressLint("StaticFieldLeak")
+        private var graph: ApplicationGraph? = null
+
+        fun getAudioManager() = graph!!.audioManager
+        fun getAudioQueueManager() = graph!!.audioQueueManager
+        fun getDeveloperManager() = graph!!.developerManager
+        fun getDialogManager() = graph!!.dialogManager
+        fun getFileManager() = graph!!.fileManager
+        fun getFileModule() = graph!!.fileModule
+        fun getFileChildrenManager() = graph!!.fileChildrenManager
+        fun getFileOpenManager() = graph!!.fileOpenManager
+        fun getFileDeleteManager() = graph!!.fileDeleteManager
+        fun getFileCopyCutManager() = graph!!.fileCopyCutManager
+        fun getFileCreatorManager() = graph!!.fileCreatorManager
+        fun getFileOnlineManager() = graph!!.fileOnlineManager
+        fun getFileOnlineChildrenManager() = graph!!.fileOnlineChildrenManager
+        fun getFileOnlineCopyCutManager() = graph!!.fileOnlineCopyCutManager
+        fun getFileOnlineCreatorManager() = graph!!.fileOnlineCreatorManager
+        fun getFileOnlineDeleteManager() = graph!!.fileOnlineDeleteManager
+        fun getFileOnlineDownloadManager() = graph!!.fileOnlineDownloadManager
+        fun getFileOnlineLoginManager() = graph!!.fileOnlineLoginManager
+        fun getFileOnlineRenameManager() = graph!!.fileOnlineRenameManager
+        fun getFileOnlineShareManager() = graph!!.fileOnlineShareManager
+        fun getFileOnlineSizeManager() = graph!!.fileOnlineSizeManager
+        fun getFileOnlineUploadManager() = graph!!.fileOnlineUploadManager
+        fun getFilePathRootManager() = graph!!.filePathManager
+        fun getFileProviderRootManager() = graph!!.fileProviderRootManager
+        fun getFileScopedStorageManager() = graph!!.fileScopedStorageManager
+        fun getFileShareManager() = graph!!.fileShareManager
+        fun getFileStorageStatsManager() = graph!!.fileStorageStatsManager
+        fun getFileRenameManager() = graph!!.fileRenameManager
+        fun getFileRootManager() = graph!!.fileRootManager
+        fun getFileSizeManager() = graph!!.fileSizeManager
+        fun getFileSortManager() = graph!!.fileSortManager
+        fun getMainThreadPost() = graph!!.mainThreadPost
+        fun getNetworkManager() = graph!!.networkManager
+        fun getPermissionManager() = graph!!.permissionManager
+        fun getHashManager() = graph!!.hashManager
+        fun getNoteManager() = graph!!.noteManager
+        fun getNotificationAudioManager() = graph!!.notificationAudioManager
+        fun getOkHttpClientLazy() = graph!!.okHttpClientLazy
+        fun getProductManager() = graph!!.productManager
+        fun getRamStatsManager() = graph!!.ramStatsManager
+        fun getRemoteConfig() = graph!!.remoteConfig
+        fun getScreenManager() = graph!!.screenManager
+        fun getSplitInstallManager() = graph!!.splitInstallManager
+        fun getThemeManager() = graph!!.themeManager
+        fun getToastManager() = graph!!.toastManager
+        fun getUpdateManager() = graph!!.updateManager
+        fun getVersionManager() = graph!!.versionManager
+
+        fun init(context: Context) {
+            if (graph == null) {
+                val applicationContext = context.applicationContext
+                graph = ApplicationGraph(
+                    applicationContext
+                )
+                val fileOnlineApiNetwork = createFileOnlineApiNetwork()
+                FileOnlineGraph.init(
+                    applicationContext,
+                    fileOnlineApiNetwork,
+                    graph!!.fileMediaScanner
+                )
+            }
+        }
+
+        private fun createFileOnlineApiNetwork() = object : FileOnlineApiNetwork {
+
+            override fun getSync(
+                url: String,
+                headers: Map<String, String>
+            ) = getNetworkManager().getSync(
+                url,
+                headers
+            )
+
+            override fun postSync(
+                url: String,
+                headers: Map<String, String>,
+                jsonObject: JSONObject
+            ) = getNetworkManager().postSync(
+                url,
+                headers,
+                jsonObject
+            )
+
+            override fun postDownloadSync(
+                url: String,
+                headers: Map<String, String>,
+                jsonObject: JSONObject,
+                javaFile: File,
+                listener: FileOnlineApiNetwork.DownloadProgressListener
+            ) = getNetworkManager().postDownloadSync(
+                url,
+                headers,
+                jsonObject,
+                javaFile,
+                object : NetworkManager.DownloadProgressListener {
+                    override fun onDownloadProgress(current: Long, size: Long) {
+                        listener.onDownloadProgress(current, size)
+                    }
+                }
+            )
+
+            override fun postUploadSync(
+                url: String,
+                headers: Map<String, String>,
+                jsonObject: JSONObject,
+                javaFile: File,
+                listener: FileOnlineApiNetwork.UploadProgressListener
+            ) = getNetworkManager().postUploadSync(
+                url,
+                headers,
+                jsonObject,
+                javaFile,
+                object : NetworkManager.UploadProgressListener {
+                    override fun onUploadProgress(current: Long, size: Long) {
+                        listener.onUploadProgress(current, size)
+                    }
+                }
+            )
+
+            override fun deleteSync(
+                url: String,
+                headers: Map<String, String>,
+                jsonObject: JSONObject
+            ) = getNetworkManager().deleteSync(
+                url,
+                headers,
+                jsonObject
+            )
+        }
+    }
+}

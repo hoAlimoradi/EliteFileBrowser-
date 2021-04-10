@@ -1,0 +1,4 @@
+#Fri Apr 09 17:04:29 IRDT 2021
+base.0=/home/ho/AndroidProjects/elite/EliteFileBrowser/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

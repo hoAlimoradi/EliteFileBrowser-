@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/ho/AndroidProjects/elite/EliteFileBrowser/feature_search_dynamic/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,141",
+                        "endColumns": "85,90",
+                        "endOffsets": "136,227"
+                    }
+                }
+            ]
+        }
+    ]
+}
